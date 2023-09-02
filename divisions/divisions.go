@@ -1,0 +1,33 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type Division struct {
+	ID     string `json:"id"`
+	Name   string `json:"name"`
+	BnName string `json:"bn_name"`
+	URL    string `json:"url"`
+}
+
+func main() {
+	jsonData := `[{"id":"1","name":"Chattagram","bn_name":"চট্টগ্রাম","url":"www.chittagongdiv.gov.bd"},
+	{"id":"2","name":"Rajshahi","bn_name":"রাজশাহী","url":"www.rajshahidiv.gov.bd"},
+	{"id":"3","name":"Khulna","bn_name":"খুলনা","url":"www.khulnadiv.gov.bd"},
+	{"id":"4","name":"Barisal","bn_name":"বরিশাল","url":"www.barisaldiv.gov.bd"},
+	{"id":"5","name":"Sylhet","bn_name":"সিলেট","url":"www.sylhetdiv.gov.bd"},
+	{"id":"6","name":"Dhaka","bn_name":"ঢাকা","url":"www.dhakadiv.gov.bd"},
+	{"id":"7","name":"Rangpur","bn_name":"রংপুর","url":"www.rangpurdiv.gov.bd"},
+	{"id":"8","name":"Mymensingh","bn_name":"ময়মনসিংহ","url":"www.mymensinghdiv.gov.bd"}]`
+
+	var divisions []Division
+	err := json.Unmarshal([]byte(jsonData), &divisions)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	fmt.Println(divisions)
+}
