@@ -67,7 +67,7 @@ The data is organized hierarchically to represent the administrative divisions o
 
 ## Data Sources
 
-- The data in this repository is sourced from [Nuhil Mehdy](https://github.com/nuhil/bangladesh-geocode/tree/master) .
+- The data in this repository is sourced from [Nuhil Mehdy](https://nuhil.net) .
 
 - Our goal is to maintain accurate and up-to-date data. If you come across any inaccuracies or have updates, please consider contributing to enhance the dataset.
 
